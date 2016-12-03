@@ -1,2 +1,4 @@
 ---
-# defaults file for ansible-role-franz
+franz_version: 4.0.4
+franz_download_link: https://github.com/meetfranz/franz-app/releases/download/{{ franz_version }}/Franz-linux-x64-{{ franz_version }}.tgz
+franz_create_desktop_file: true

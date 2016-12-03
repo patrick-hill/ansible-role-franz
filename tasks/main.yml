@@ -1,2 +1,4 @@
 ---
-# tasks file for ansible-role-franz
+- name: Install Franz (Debian)
+  include: "debian.yml"
+  when: ansible_os_family in [ "Debian", "Linuxmint" ]
