@@ -9,7 +9,7 @@ Install [Franz](http://meetfranz.com/) chat client and drops the .desktop file f
 Requirements
 ------------
 
-Ansible 1.6+
+Ansible 2.1+
 
 Role Variables
 --------------
