@@ -2,6 +2,7 @@ Ansible Role: Franz
 =========
 
 [![Build Status](https://travis-ci.org/patrick-hill/ansible-role-franz.svg?branch=master)](https://travis-ci.org/patrick-hill/ansible-role-franz)
+[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-patrick--hill.franz-blue.svg)](https://galaxy.ansible.com/patrick-hill/franz)
 
 
 Install [Franz](http://meetfranz.com/) chat client and drops the .desktop file for the Start Menu.
