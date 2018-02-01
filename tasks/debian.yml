@@ -3,4 +3,5 @@
 - name: Install Franz
   apt:
     deb: "{{ franz_url }}"
+  become: true
   when: franz_url is defined
