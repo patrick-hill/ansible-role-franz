@@ -1,4 +1,3 @@
 ---
-franz_version: 4.0.4
-franz_download_link: https://github.com/meetfranz/franz-app/releases/download/{{ franz_version }}/Franz-linux-x64-{{ franz_version }}.tgz
-franz_create_desktop_file: true
+franz_version: 5.0.0-beta.15
+franz_url: "https://github.com/meetfranz/franz/releases/download/v{{ franz_version}}/franz_{{ franz_version }}_amd64.deb"

@@ -1,34 +1,6 @@
 ---
-- name: Download franz tarball
-  get_url:
-    url: "{{ franz_download_link }}"
-    dest: "/tmp/franz-{{ franz_version }}.tgz"
-  when: franz_download_link is defined
-  register: download
 
-- block:
-
-  - name: Create Franz Destination Dir
-    file:
-      path: "/opt/franz-{{ franz_version }}"
-      owner: root
-      group: root
-      mode: 0644
-      state: directory
-    become: yes
-
-  - name: Extact Franz tarball
-    unarchive:
-      src: "/tmp/franz-{{ franz_version }}.tgz"
-      dest: "/opt/franz-{{ franz_version }}"
-      copy: no
-    become: true
-
-  - name: Create .desktop File for Start Menu
-    template: src=franz.desktop.j2
-              dest=/usr/share/applications/franz.desktop
-              owner=root group=root mode=0644
-    become: yes
-    when: franz_create_desktop_file
-
-  when: download.changed
+- name: Install Franz
+  apt:
+    deb: "{{ franz_url }}"
+  when: franz_url is defined
